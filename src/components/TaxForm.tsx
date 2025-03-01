@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import StepOne from "./StepOne";
 import StepTwo from "./StepTwo";
 import StepThree from "./StepThree";
@@ -18,8 +18,16 @@ const TaxForm: React.FC = () => {
     const prevStep = () => setStep((prevStep) => prevStep - 1);
 
     const updateFormData = (inputName: keyof FormData, value: string) => {
-        setFormData({ ...formData, [inputName]: value });
+        setFormData((prevData) => {
+            const newData = { ...prevData, [inputName]: value };
+            console.log("new updated formData:", newData); // Confirm the state change
+            return newData;
+        });
     };
+
+    useEffect(() => {
+        console.log("current formData state:", formData); //console.Log every state update
+    }, [formData]);
 
     return (
         <div>

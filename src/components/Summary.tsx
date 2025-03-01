@@ -7,6 +7,7 @@ interface Props {
 }
 
 const Summary: React.FC<Props> = ({ formData, prevStep }) => {
+    console.log("Summary received data:", formData);
     return (
         <div>
             <h2>Summary</h2>

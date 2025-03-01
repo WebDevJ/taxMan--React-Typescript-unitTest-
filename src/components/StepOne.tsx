@@ -18,6 +18,8 @@ const StepOne: React.FC<Props> = ({ nextStep, updateFormData }) => {
         }
         updateFormData("name", name);
         updateFormData("ssn", ssn);
+        console.log(updateFormData.name);
+        console.log(FormData.name)
         nextStep();
     };
 
