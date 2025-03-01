@@ -1,3 +1,16 @@
+## **Project Overview**
+
+- **Name:** TaxMan App
+- **Tech Stack:** React (TypeScript), Jest, React Testing Library
+- Features:
+  - Multi-step form (Personal Info, Income, Deductions)
+  - Input validation (SSN format, numeric fields)
+  - State management with **useState**
+  - Unit testing using **Jest & React Testing Library**
+
+------
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
