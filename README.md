@@ -9,7 +9,7 @@
     - State management with **useState**
     - Unit testing using **Jest & React Testing Library**
   - **API Integration & Business Logic**  
-    - Fetch tax brackets from a government API. 
+    - Fetch tax brackets from an API. 
     - Calculate estimated tax liability based on user income. 
     - Implement loading states & error handling.  
 
