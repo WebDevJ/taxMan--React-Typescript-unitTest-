@@ -12,7 +12,7 @@ Features:
     - Fetch tax brackets from an API. 
     - Calculate estimated tax liability based on user income. 
     - Implement loading states & error handling.
-**Website:** https://taxmanapp.onrender.com
+- **Website:** https://taxmanapp.onrender.com
 
 ------
 
