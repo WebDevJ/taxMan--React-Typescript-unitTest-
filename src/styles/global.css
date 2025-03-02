@@ -1,0 +1,91 @@
+/* === TaxCloud-Inspired Theme === */
+
+:root {
+    --deep-blue: #1f3e56;
+    /* Primary deep blue */
+    --bright-orange: #d86541;
+    /* Highlight accent */
+    --neutral-white: #ffffff;
+    --light-gray: #f4f5f7;
+    --dark-gray: #35424a;
+}
+
+/* === General Styling === */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--neutral-white);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === Header Styling === */
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: var(--deep-blue);
+    font-size: 24px;
+}
+
+/* === Buttons === */
+.button-primary {
+    background-color: var(--bright-orange);
+    color: var(--neutral-white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+.button-primary:hover {
+    background-color: var(--deep-blue);
+}
+
+/* === Table Styling === */
+.tax-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tax-table,
+th,
+td {
+    border: 1px solid var(--dark-gray);
+}
+
+.tax-table th {
+    background-color: var(--deep-blue);
+    color: var(--neutral-white);
+    padding: 12px;
+    text-align: left;
+}
+
+.tax-table td {
+    background-color: var(--neutral-white);
+    padding: 10px;
+    text-align: left;
+}
+
+/* === Centered Layouts === */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
