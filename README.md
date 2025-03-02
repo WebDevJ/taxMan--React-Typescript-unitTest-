@@ -1,6 +1,6 @@
 ## **Project Overview**
 
-**Name:** TaxMan App
+**Name:** TaxMan App  
 **Tech Stack:** React (TypeScript), Jest, React Testing Library
 Features:
   - **Data Collection**
