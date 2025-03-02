@@ -46,10 +46,10 @@ const TaxBracketCalculator: React.FC<Props> = ({ taxableIncome }) => {
         const getTaxData = async () => {
             try {
                 const data = await fetchTaxData();
-                if (data && data.data && data.data.length > 0) {
+                if (data?.data?.length > 0) {
                     setNationalIncome(data.data[0].Income);
                 }
-            } catch (err) {
+            } catch {
                 setError("Failed to fetch tax data.");
             } finally {
                 setLoading(false);
@@ -63,16 +63,14 @@ const TaxBracketCalculator: React.FC<Props> = ({ taxableIncome }) => {
     if (error) return <p style={{ color: "red" }}>{error}</p>;
 
     return (
-        <div>
+        <div className="container">
             <h2>Tax Bracket Calculator</h2>
-            {nationalIncome !== null && (
-                <p><strong>National Average Income:</strong> ${nationalIncome.toLocaleString()}</p>
-            )}
+            {nationalIncome && <p><strong>National Average Income:</strong> ${nationalIncome.toLocaleString()}</p>}
             <p><strong>Taxable Income:</strong> ${taxableIncome}</p>
-            <p><strong>Your estimated tax:</strong> <strong>${taxOwed.toFixed(2)}</strong></p>
+            <p><strong>Estimated Tax:</strong> ${taxOwed.toFixed(2)}</p>
 
             <h3>Tax Brackets</h3>
-            <table style={{ borderCollapse: "collapse", width: "100%", border: "1px solid black" }}>
+            <table className="tax-table">
                 <thead>
                     <tr>
                         <th>Income Bracket</th>

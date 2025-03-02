@@ -8,7 +8,6 @@ interface Props {
 }
 
 const Summary: React.FC<Props> = ({ formData, prevStep, setTaxableIncome }) => {
-    const [showTaxCalculator, setShowTaxCalculator] = useState<boolean>(false);
     const taxableIncome = Number(formData.income) - Number(formData.deductions);
 
     console.log("Summary received data:", formData);
@@ -16,19 +15,21 @@ const Summary: React.FC<Props> = ({ formData, prevStep, setTaxableIncome }) => {
     const handleSubmit = () => {
         alert("Data Submitted!");
         setTaxableIncome(taxableIncome);
-        setShowTaxCalculator(true);
     };
 
     return (
-        <div>
+        <div className="container">
             <h2>Summary</h2>
             <p><strong>Name:</strong> {formData.name}</p>
             <p><strong>SSN:</strong> {formData.ssn}</p>
             <p><strong>Income:</strong> ${formData.income}</p>
             <p><strong>Deductions:</strong> ${formData.deductions}</p>
             <p><strong>Taxable Income:</strong> ${taxableIncome}</p>
-            <button onClick={prevStep}>Back</button>
-            <button onClick={handleSubmit}>Submit</button>
+
+            <div className="center">
+                <button className="button-primary" onClick={prevStep}>Back</button>
+                <button className="button-primary" onClick={handleSubmit}>Submit</button>
+            </div>
         </div>
     );
 };

@@ -3,12 +3,12 @@
 - **Name:** TaxMan App
 - **Tech Stack:** React (TypeScript), Jest, React Testing Library
 - Features:
-  **Data Collection**
+  - **Data Collection**
     - Multi-step form (Personal Info, Income, Deductions)
     - Input validation (SSN format, numeric fields)
     - State management with **useState**
     - Unit testing using **Jest & React Testing Library**
-  **API Integration & Business Logic**  
+  - **API Integration & Business Logic**  
     - Fetch tax brackets from a government API. 
     - Calculate estimated tax liability based on user income. 
     - Implement loading states & error handling.  
