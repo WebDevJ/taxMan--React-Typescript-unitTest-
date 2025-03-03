@@ -7,7 +7,9 @@ const App: React.FC = () => {
 
   return (
     <div className="container">
-      <h1>TaxMan App.</h1>
+      <h1>
+        <span className="name" style={{ color: "--bright-orange" }}>Tax</span>Man App.
+      </h1>
       <TaxForm setTaxableIncome={setTaxableIncome} />
       {taxableIncome !== null && <TaxBracketCalculator taxableIncome={taxableIncome} />}
     </div>

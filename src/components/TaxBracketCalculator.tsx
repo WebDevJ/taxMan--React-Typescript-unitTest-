@@ -44,12 +44,17 @@ const TaxBracketCalculator: React.FC<Props> = ({ taxableIncome }) => {
 
     useEffect(() => {
         const getTaxData = async () => {
+            console.log("calling api")
             try {
                 const data = await fetchTaxData();
-                if (data?.data?.length > 0) {
-                    setNationalIncome(data.data[0].Income);
+                console.log("API Response:", data);
+
+                // Correct way to extract "National Average Income"
+                if (data && data["0"] && data["0"]["National Average Income"]) {
+                    setNationalIncome(parseFloat(data["0"]["National Average Income"].replace(/,/g, "")));
                 }
-            } catch {
+            } catch (error) {
+                console.error("API Error:", error);
                 setError("Failed to fetch tax data.");
             } finally {
                 setLoading(false);
@@ -58,6 +63,7 @@ const TaxBracketCalculator: React.FC<Props> = ({ taxableIncome }) => {
 
         getTaxData();
     }, []);
+
 
     if (loading) return <p>Loading tax data...</p>;
     if (error) return <p style={{ color: "red" }}>{error}</p>;
