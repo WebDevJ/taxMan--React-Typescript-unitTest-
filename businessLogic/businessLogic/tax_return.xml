@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TaxReturn xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="tax_return.xsd">
+    <Taxpayer>
+        <Name>jhdfbhjfv</Name>
+        <SSN>111-11-1111</SSN>
+        <FilingStatus>Single</FilingStatus>
+    </Taxpayer>
+
+    <Income>
+        <Salary>0</Salary>
+        <OtherIncome>0</OtherIncome>
+        <TotalIncome>0</TotalIncome>
+    </Income>
+
+    <Deductions>
+        <HasRetirementPlan>false</HasRetirementPlan>
+        <ContributedToHSA>false</ContributedToHSA>
+        <MedicalExpenses>0</MedicalExpenses>
+        <StandardDeduction>12550</StandardDeduction>
+    </Deductions>
+
+    <Credits>
+        <EligibleForEarnedIncomeCredit>false</EligibleForEarnedIncomeCredit>
+        <EligibleForChildTaxCredit>false</EligibleForChildTaxCredit>
+        <EligibleForEducationCredit>false</EligibleForEducationCredit>
+    </Credits>
+
+    <Summary>
+        <TaxableIncome>0</TaxableIncome>
+        <TaxOwed>0</TaxOwed>
+    </Summary>
+</TaxReturn>
