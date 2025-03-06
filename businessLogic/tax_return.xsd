@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="TaxReturn">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Taxpayer">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Name" type="xs:string"/>
+                            <xs:element name="SSN" type="xs:string"/>
+                            <xs:element name="FilingStatus" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="Income">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Salary" type="xs:integer"/>
+                            <xs:element name="OtherIncome" type="xs:integer"/>
+                            <xs:element name="TotalIncome" type="xs:integer"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="Deductions">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="HasRetirementPlan" type="xs:boolean"/>
+                            <xs:element name="ContributedToHSA" type="xs:boolean"/>
+                            <xs:element name="MedicalExpenses" type="xs:integer"/>
+                            <xs:element name="StandardDeduction" type="xs:integer"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="Credits">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="EligibleForEarnedIncomeCredit" type="xs:boolean"/>
+                            <xs:element name="EligibleForChildTaxCredit" type="xs:boolean"/>
+                            <xs:element name="EligibleForEducationCredit" type="xs:boolean"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="Summary">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="TaxableIncome" type="xs:integer"/>
+                            <xs:element name="TaxOwed" type="xs:integer"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

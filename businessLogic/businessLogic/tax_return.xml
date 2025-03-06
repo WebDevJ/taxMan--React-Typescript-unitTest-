@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TaxReturn xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="tax_return.xsd">
+    <Taxpayer>
+        <Name>zxz</Name>
+        <SSN>111-11-1111</SSN>
+        <FilingStatus>{filingStatus}</FilingStatus>
+    </Taxpayer>
+
+    <Income>
+        <Salary>{salary}</Salary>
+        <OtherIncome>{otherIncome}</OtherIncome>
+        <TotalIncome>{totalIncome}</TotalIncome>
+    </Income>
+
+    <Deductions>
+        <HasRetirementPlan>{hasRetirementPlan}</HasRetirementPlan>
+        <ContributedToHSA>{contributedToHSA}</ContributedToHSA>
+        <MedicalExpenses>{medicalExpenses}</MedicalExpenses>
+        <StandardDeduction>{standardDeduction}</StandardDeduction>
+    </Deductions>
+
+    <Credits>
+        <EligibleForEarnedIncomeCredit>{earnedIncomeCredit}</EligibleForEarnedIncomeCredit>
+        <EligibleForChildTaxCredit>{childTaxCredit}</EligibleForChildTaxCredit>
+        <EligibleForEducationCredit>{educationCredit}</EligibleForEducationCredit>
+    </Credits>
+
+    <Summary>
+        <TaxableIncome>{taxableIncome}</TaxableIncome>
+        <TaxOwed>{taxOwed}</TaxOwed>
+    </Summary>
+</TaxReturn>
