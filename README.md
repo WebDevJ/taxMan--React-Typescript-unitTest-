@@ -1,6 +1,6 @@
 ## **Project Overview**
-**deployed @** https://taxmanapp.onrender.com/
-**Name:** TaxMan App
+**deployed @** https://taxmanapp.onrender.com/  
+**Name:** TaxMan App  
 **Tech Stack:** React (TypeScript), Jest, React Testing Library. 
 Features:
 - **Data Collection**
