@@ -13,8 +13,11 @@
     - Fetch tax brackets from an API. 
     - Calculate estimated tax liability based on user income. 
     - Implement loading states & error handling.
-- **Website:** https://taxmanapp.onrender.com
-
+- **XML tax return**
+    - User input dynamically fills the XML tax return
+    - Properly structured data flow from TaxForm.tsx → FileTaxReturn.tsx
+    - Validate the XML with an XSD schema
+    - End result: Users can submit and see their tax return XML!
 ------
 
 
