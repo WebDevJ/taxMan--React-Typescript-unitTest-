@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+const API_URL = "https://tax-backend-j62m.onrender.com";
 interface Props {
     summaryData: {
         name?: string;
@@ -27,7 +28,7 @@ const FileTaxReturn: React.FC<Props> = ({ summaryData }) => {
 
     const handleSubmit = async () => {
         try {
-            const res = await axios.post("http://localhost:5000/file-tax-return", summaryData, {
+            const res = await axios.post(`${API_URL}/file-tax-return`, summaryData, {
                 headers: {
                     "Content-Type": "application/json"
                 }
